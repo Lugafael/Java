@@ -1,0 +1,53 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+            public static void main(String[] args) {
+                Scanner y = new Scanner(System.in);
+
+                ArrayList<Integer> numero = new ArrayList<>();
+                ArrayList<Integer> par = new ArrayList<>();
+                ArrayList<Integer> impar = new ArrayList();
+                ArrayList<Integer> positivo = new ArrayList();
+                ArrayList<Integer> negativo = new ArrayList();
+
+
+                for(int i = 0; i < 5; i++){
+                    int x = y.nextInt();
+                    numero.add(x);
+                }
+                for(int i = 0; i < 5; i++){
+                    if(numero.get(i) % 2 == 0){
+                        par.add(numero.get(i));
+                    }
+                }
+
+                for(int i = 0; i < 5; i++){
+                    if(numero.get(i) % 2 != 0){
+                        impar.add(numero.get(i));
+                    }
+                }
+
+                for(int i = 0; i < 5; i++){
+                    if(numero.get(i) > 0){
+                        positivo.add(numero.get(i));
+                    }
+                }
+
+                for(int i = 0; i < 5; i++){
+                    if(numero.get(i) < 0){
+                        negativo.add(numero.get(i));
+                    }
+                }
+
+                System.out.println(par.size() + " valor(es) par(es)");
+                System.out.println(impar.size() + " valor(es) impar(es)");
+                System.out.println(positivo.size() + " valor(es) positivo(s)");
+                System.out.println(negativo.size() + " valor(es) negativo(s)");
+
+
+
+            }
+        }

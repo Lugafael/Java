@@ -1,0 +1,31 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner scan = new Scanner(System.in);
+        int i = 0;
+        int x = scan.nextInt();
+        int y = scan.nextInt();
+        int min, max;
+        int impares = 0;
+
+        if(x < y) {
+            min = x;
+            max = y;
+        }
+        else {
+            min = y;
+            max = x;
+        }
+
+        for(i = min+1; i < max; i++) {
+            if(i%2 != 0) {
+                impares += i;
+            }
+        }
+        System.out.println(impares);
+        scan.close();
+    }
+}
